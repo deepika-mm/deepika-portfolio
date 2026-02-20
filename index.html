@@ -18,30 +18,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 body{
 font-family:Poppins;
 scroll-behavior:smooth;
-background:black;
+background:#020617;
 color:white;
 }
 
-/* colorful animated background */
-.bg-hero{
-background:linear-gradient(120deg,#6366f1,#8b5cf6,#ec4899);
-background-size:300% 300%;
-animation:gradientMove 10s infinite alternate;
+/* gradient hero */
+.hero-bg{
+background:linear-gradient(-45deg,#6366f1,#ec4899,#8b5cf6,#06b6d4);
+background-size:400% 400%;
+animation:gradient 10s ease infinite;
 }
 
-@keyframes gradientMove{
-0%{background-position:left;}
-100%{background-position:right;}
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
-/* floating animation */
 .float{
 animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
 0%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
+50%{transform:translateY(-12px);}
 100%{transform:translateY(0);}
 }
 </style>
@@ -50,10 +50,10 @@ animation:float 4s ease-in-out infinite;
 <body>
 
 <!-- NAVBAR -->
-<header class="fixed top-0 w-full bg-black/50 backdrop-blur z-50">
+<header class="fixed top-0 w-full bg-black/40 backdrop-blur z-50">
 <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
 
-<h1 class="font-bold text-lg text-purple-400">Deepika</h1>
+<h1 class="text-xl font-bold text-pink-400">Deepika</h1>
 
 <nav class="hidden md:flex gap-6">
 <a href="#about">About</a>
@@ -68,19 +68,19 @@ animation:float 4s ease-in-out infinite;
 </header>
 
 <!-- HERO -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-hero">
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 hero-bg">
 
 <img src="profile.jpeg"
-class="float w-44 h-44 rounded-full border-4 border-white shadow-2xl mb-6 object-cover"
+class="float w-44 h-44 rounded-full border-4 border-white shadow-xl mb-6 object-cover"
 data-aos="zoom-in">
 
-<h1 class="text-5xl font-bold mb-3" data-aos="fade-down">
+<h1 class="text-5xl font-bold mb-4" data-aos="fade-down">
 Hi, I'm Deepika
 </h1>
 
 <p class="max-w-xl mb-6" data-aos="fade-up">
-Computer Science Engineering student passionate about AI,
-Machine Learning, Web Development and Data Analytics.
+Computer Science Engineering student passionate about
+AI, Machine Learning, Web Development and Data Analytics.
 </p>
 
 <div class="flex gap-4" data-aos="fade-up">
@@ -100,49 +100,52 @@ GitHub
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-20 bg-gradient-to-r from-purple-900 to-indigo-900">
-<div class="max-w-4xl mx-auto px-6 text-center">
+<section id="about" class="py-20 bg-gradient-to-r from-indigo-800 to-purple-800">
+<div class="max-w-4xl mx-auto text-center px-6">
 
 <h2 class="text-3xl font-bold mb-6" data-aos="fade-right">About Me</h2>
 
 <p class="text-gray-200" data-aos="fade-left">
 Motivated Computer Science Engineering student seeking opportunities
 to apply technical knowledge in real-world environments.
-I enjoy building machine learning models, developing responsive
-web applications and analyzing data.
+I enjoy building machine learning models and modern web applications.
 </p>
 
 </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="py-20 bg-gradient-to-r from-indigo-900 to-blue-900">
-<h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Skills</h2>
+<section id="skills" class="py-20 bg-gradient-to-r from-blue-700 to-indigo-900">
+<h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
 
-<div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6 text-center">
-
-<div class="bg-white/10 p-6 rounded-xl hover:scale-110 transition" data-aos="fade-right">
-<i class="fa-brands fa-java text-2xl mb-2"></i><br>Java
-</div>
-
-<div class="bg-white/10 p-6 rounded-xl hover:scale-110 transition" data-aos="fade-left">
-<i class="fa-brands fa-python text-2xl mb-2"></i><br>Python
-</div>
+<div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto px-6 text-center">
 
 <div class="bg-white/10 p-6 rounded-xl hover:scale-110 transition" data-aos="fade-up">
-<i class="fa-brands fa-html5 text-2xl mb-2"></i><br>HTML
+<i class="fa-brands fa-java text-4xl text-red-500 mb-3"></i>
+<p>Java</p>
 </div>
 
 <div class="bg-white/10 p-6 rounded-xl hover:scale-110 transition" data-aos="fade-down">
-<i class="fa-solid fa-database text-2xl mb-2"></i><br>SQL
+<i class="fa-brands fa-python text-4xl text-yellow-400 mb-3"></i>
+<p>Python</p>
+</div>
+
+<div class="bg-white/10 p-6 rounded-xl hover:scale-110 transition" data-aos="fade-left">
+<i class="fa-brands fa-html5 text-4xl text-orange-500 mb-3"></i>
+<p>HTML</p>
+</div>
+
+<div class="bg-white/10 p-6 rounded-xl hover:scale-110 transition" data-aos="fade-right">
+<i class="fa-solid fa-database text-4xl text-green-400 mb-3"></i>
+<p>SQL</p>
 </div>
 
 </div>
 </section>
 
 <!-- EDUCATION -->
-<section id="education" class="py-20 bg-gradient-to-r from-pink-900 to-purple-900">
-<h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-down">Education</h2>
+<section id="education" class="py-20 bg-gradient-to-r from-purple-800 to-pink-700">
+<h2 class="text-3xl font-bold text-center mb-10">Education</h2>
 
 <div class="max-w-4xl mx-auto px-6 space-y-6">
 
@@ -162,32 +165,32 @@ New Don Bosco School — SSLC | 86.24% | 2020
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="py-20 bg-gradient-to-r from-indigo-900 to-purple-900">
+<section id="projects" class="py-20 bg-gradient-to-r from-indigo-900 to-blue-900">
 <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
 
 <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
 
 <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition" data-aos="fade-right">
 <h3 class="font-semibold mb-2">Music Streaming Platform</h3>
-<p class="text-gray-200 text-sm">Database system for managing playlists.</p>
+<p>Database system for managing playlists.</p>
 </div>
 
 <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition" data-aos="fade-up">
 <h3 class="font-semibold mb-2">Skin Disease Detection</h3>
-<p class="text-gray-200 text-sm">Machine learning medical project.</p>
+<p>Machine learning medical project.</p>
 </div>
 
 <div class="bg-white/10 p-6 rounded-xl hover:scale-105 transition" data-aos="fade-left">
 <h3 class="font-semibold mb-2">Expense Tracker</h3>
-<p class="text-gray-200 text-sm">Budget and spending analysis app.</p>
+<p>Budget tracking application.</p>
 </div>
 
 </div>
 </section>
 
 <!-- CERTIFICATES -->
-<section id="certificates" class="py-20 bg-gradient-to-r from-purple-900 to-pink-900">
-<h2 class="text-3xl font-bold text-center mb-10" data-aos="zoom-in">Certificates</h2>
+<section id="certificates" class="py-20 bg-gradient-to-r from-pink-700 to-purple-900">
+<h2 class="text-3xl font-bold text-center mb-10">Certificates</h2>
 
 <div class="max-w-4xl mx-auto px-6 space-y-3 text-lg">
 
@@ -199,17 +202,31 @@ New Don Bosco School — SSLC | 86.24% | 2020
 </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="py-20 text-center bg-gradient-to-r from-indigo-900 to-purple-900">
+<!-- CONTACT FORM -->
+<section id="contact" class="py-20 bg-gradient-to-r from-blue-900 to-indigo-900">
 
-<h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Contact</h2>
+<h2 class="text-3xl font-bold text-center mb-10">Contact Me</h2>
 
-<p>Bangalore, India</p>
-<p class="mb-4">deepikammudalagirigowda@gmail.com</p>
+<div class="max-w-xl mx-auto px-6">
 
-<div class="flex justify-center gap-6 text-xl mt-4">
-<a href="https://github.com/deepika-mm"><i class="fab fa-github"></i></a>
-<a href="https://linkedin.com/in/deepika-mm"><i class="fab fa-linkedin"></i></a>
+<form class="space-y-4">
+
+<input type="text" placeholder="Your Name"
+class="w-full p-3 rounded bg-white/10 border border-gray-400">
+
+<input type="email" placeholder="Your Email"
+class="w-full p-3 rounded bg-white/10 border border-gray-400">
+
+<textarea placeholder="Your Message"
+class="w-full p-3 rounded bg-white/10 border border-gray-400"></textarea>
+
+<button
+class="w-full bg-pink-500 hover:bg-pink-600 p-3 rounded font-semibold transition">
+Send Message
+</button>
+
+</form>
+
 </div>
 
 </section>
@@ -220,9 +237,7 @@ New Don Bosco School — SSLC | 86.24% | 2020
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-AOS.init({
-duration:1000
-});
+AOS.init({duration:1000});
 </script>
 
 </body>
